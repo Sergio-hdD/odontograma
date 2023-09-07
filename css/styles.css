@@ -1,0 +1,75 @@
+.pieza_dental { /* puede ser diente, muela, premolar, etc.*/
+  position: static; /* Establece la posición del elemento */
+  width: 0px; /* Ancho del elemento */
+  height: auto; /* Altura automática del elemento */
+  display: inline-block; /* Muestra el elemento como un bloque en línea */
+}
+
+.plano_lateral {
+  background-color: #FFFFFF; /* Color de fondo */
+  border: 1px solid #7F7F7F; /* Borde del elemento */
+  position: relative; /* Establece la posición del elemento */
+  left: 28px !important;
+  width: 20px; /* Ancho del elemento */
+  height: 15px; /* Altura del elemento */
+  border-radius: 5px 5px 0px 1px; /* Bordes redondeados */
+}
+
+.izquierdo {
+    top: 2px !important;
+    left: 11px !important;
+    transform: rotate(270deg);
+}
+
+.debajo {
+    top: 4px !important;
+    left: 28px !important;
+    transform: rotate(180deg);
+}
+
+.derecha {
+    top: -28px !important;
+    left: 45px !important;
+    transform: rotate(90deg);
+}
+
+.centro {
+  background: #F3F3F3; /* Color de fondo */
+  border: 1px solid #7F7F7F; /* Borde del elemento */
+  width: 25px; /* Ancho del elemento */
+  height: 25px; /* Altura del elemento */
+  top: -48px; /* Posición superior del elemento */
+  left: 25.7px; /* Posición izquierda del elemento */
+  position: relative; /* Establece la posición del elemento */
+  border-radius:10px; /* Bordes redondeados */
+}
+
+.plano_lateral:hover, .centro:hover {
+  border: 1px solid rgb(34, 155, 84); /* Borde del elemento */  
+  cursor: pointer; /* Cambiar el cursor al puntero */
+}
+
+.numero_etiqueta {
+  margin-left: 28px;
+  display: inline-block !important;
+  border-radius: 10px !important;
+  color: #fff;
+  background-color: #17a2b8;
+  padding: 0.25em 0.4em;
+  font-size: 70%;
+  font-weight: 600;
+  line-height: 0.5;
+}
+
+.cuadrante_1, .cuadrante_2, .cuadrante_4, .cuadrante_3 {
+  background-color: #f07f53;
+  width: 50%;
+}
+
+.cuadrante_1, .cuadrante_4{
+  border-right: 2px solid black; /* Borde del elemento */
+}
+
+.cuadrante_4, .cuadrante_3 {
+  border-top: 2px solid black; /* Borde del elemento */
+}
