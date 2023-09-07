@@ -8,6 +8,9 @@
 
   <link href="css/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/funciones.js"></script>
 
 </head>
 <body>
@@ -21,69 +24,25 @@
       
       <div class="panel-body">
         
-        <div class="row"> <!-- contiene al cuadrante 1 (superior derecha del paciente) y al cuadrante 2 (superior izquierdo del paciente) -->
-          <div class="cuadrante_1 pt-4">
-            <div data-name="value" class="pieza_dental"> <!-- comienzo figura dental -->
-              <span class="numero_etiqueta">11</span>
-              <div class="plano_lateral">
-              </div>
-              <div class="plano_lateral izquierdo">
-              </div>
-              <div class="plano_lateral debajo">
-              </div>
-              <div class="plano_lateral derecha">
-              </div>
-              <div class="centro">
-              </div>
-            </div> <!-- fin figura dental -->
+        <div class="row"> <!-- contiene al cuadrante 1 (superior derecho del paciente) y al cuadrante 2 (superior izquierdo del paciente) -->
+          <div class="cuadrante_1">
+            <div id="contenido_cuadrante_1" class="pt-4 text-center">
+            </div>
           </div> <!-- fin cuadrante_1 -->
-          <div class="cuadrante_2 pt-4">
-            <div data-name="value" class="pieza_dental"> <!-- comienzo figura dental -->
-              <span class="numero_etiqueta">21</span>
-              <div class="plano_lateral">
-              </div>
-              <div class="plano_lateral izquierdo">
-              </div>
-              <div class="plano_lateral debajo">
-              </div>
-              <div class="plano_lateral derecha">
-              </div>
-              <div class="centro">
-              </div>
-            </div> <!-- fin figura dental -->
+          <div class="cuadrante_2">
+            <div id="contenido_cuadrante_2" class="pt-4 text-center">
+            </div>
           </div> <!-- fin cuadrante_2 -->
         </div> <!-- fin row que contiene al cuadrante_1 y al cuadrante_2 -->
 
-        <div class="row"> <!-- contiene al cuadrante 4 (inferior derecha del paciente) y al cuadrante 3 (inferior izquierdo del paciente) -->
-          <div class="cuadrante_4 pt-4">
-            <div data-name="value" class="pieza_dental"> <!-- comienzo figura dental -->
-              <span class="numero_etiqueta">41</span>
-              <div class="plano_lateral">
-              </div>
-              <div class="plano_lateral izquierdo">
-              </div>
-              <div class="plano_lateral debajo">
-              </div>
-              <div class="plano_lateral derecha">
-              </div>
-              <div class="centro">
-              </div>
-            </div> <!-- fin figura dental -->
+        <div class="row"> <!-- contiene al cuadrante 4 (inferior derecho del paciente) y al cuadrante 3 (inferior izquierdo del paciente) -->
+          <div class="cuadrante_4">
+            <div id="contenido_cuadrante_4" class="pt-4 text-center">
+            </div>
           </div> <!-- fin cuadrante_4 -->
-          <div class="cuadrante_3 pt-4">
-            <div data-name="value" class="pieza_dental"> <!-- comienzo figura dental -->
-              <span class="numero_etiqueta">31</span>
-              <div class="plano_lateral">
-              </div>
-              <div class="plano_lateral izquierdo">
-              </div>
-              <div class="plano_lateral debajo">
-              </div>
-              <div class="plano_lateral derecha">
-              </div>
-              <div class="centro">
-              </div>
-            </div> <!-- fin figura dental -->
+          <div class="cuadrante_3">
+            <div id="contenido_cuadrante_3" class="pt-4 text-center">
+            </div>
           </div> <!-- fin cuadrante_3 -->
         </div> <!-- fin row que contiene al cuadrante_4 y al cuadrante_3 -->
 

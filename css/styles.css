@@ -1,6 +1,6 @@
 .pieza_dental { /* puede ser diente, muela, premolar, etc.*/
   position: static; /* Establece la posición del elemento */
-  width: 0px; /* Ancho del elemento */
+  width: 65px; /* Ancho del elemento */
   height: auto; /* Altura automática del elemento */
   display: inline-block; /* Muestra el elemento como un bloque en línea */
 }
@@ -50,7 +50,7 @@
 }
 
 .numero_etiqueta {
-  margin-left: 28px;
+  margin-left: 10px;
   display: inline-block !important;
   border-radius: 10px !important;
   color: #fff;
