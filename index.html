@@ -15,40 +15,45 @@
 </head>
 <body>
 
-  <div class="container">
-    <div>
+  <div class="container-fluid">
+    
+    <div class="panel-body m-4">
       
-      <div>
+      <div class="text-center">
         <h4>Odontograma</h4>
       </div>
-      
-      <div class="panel-body">
-        
-        <div class="row"> <!-- contiene al cuadrante 1 (superior derecho del paciente) y al cuadrante 2 (superior izquierdo del paciente) -->
-          <div class="cuadrante_1">
-            <div id="contenido_cuadrante_1" class="pt-4 text-center">
-            </div>
-          </div> <!-- fin cuadrante_1 -->
-          <div class="cuadrante_2">
-            <div id="contenido_cuadrante_2" class="pt-4 text-center">
-            </div>
-          </div> <!-- fin cuadrante_2 -->
-        </div> <!-- fin row que contiene al cuadrante_1 y al cuadrante_2 -->
 
-        <div class="row"> <!-- contiene al cuadrante 4 (inferior derecho del paciente) y al cuadrante 3 (inferior izquierdo del paciente) -->
-          <div class="cuadrante_4">
-            <div id="contenido_cuadrante_4" class="pt-4 text-center">
-            </div>
-          </div> <!-- fin cuadrante_4 -->
-          <div class="cuadrante_3">
-            <div id="contenido_cuadrante_3" class="pt-4 text-center">
-            </div>
-          </div> <!-- fin cuadrante_3 -->
-        </div> <!-- fin row que contiene al cuadrante_4 y al cuadrante_3 -->
+      <div class="centrado_de_contenido">
 
-      </div> <!-- fin panel-body -->
-    
-    </div>
+        <div class="grafico_odontograma">
+
+          <div class="row"> <!-- contiene al cuadrante 1 (superior derecho del paciente) y al cuadrante 2 (superior izquierdo del paciente) -->
+            <div class="cuadrante_1 col-6">
+              <div id="contenido_cuadrante_1" class="contenedor_izquierdo">
+              </div>
+            </div> <!-- fin cuadrante_1 -->
+            <div class="cuadrante_2 col-6">
+              <div id="contenido_cuadrante_2" class="contenedor_derecho">
+              </div>
+            </div> <!-- fin cuadrante_2 -->
+          </div> <!-- fin row que contiene al cuadrante_1 y al cuadrante_2 -->
+
+          <div class="row"> <!-- contiene al cuadrante 4 (inferior derecho del paciente) y al cuadrante 3 (inferior izquierdo del paciente) -->
+            <div class="cuadrante_4 col-6">
+              <div id="contenido_cuadrante_4" class="contenedor_izquierdo">
+              </div>
+            </div> <!-- fin cuadrante_4 -->
+            <div class="cuadrante_3 col-6">
+              <div id="contenido_cuadrante_3" class="contenedor_derecho">
+              </div>
+            </div> <!-- fin cuadrante_3 -->
+          </div> <!-- fin row que contiene al cuadrante_4 y al cuadrante_3 -->
+        </div>
+
+      </div>
+
+    </div> <!-- fin panel-body -->
+
   </div>
 
 </body>

@@ -1,7 +1,7 @@
 .pieza_dental { /* puede ser diente, muela, premolar, etc.*/
   position: static; /* Establece la posición del elemento */
   width: 65px; /* Ancho del elemento */
-  height: auto; /* Altura automática del elemento */
+  height: 85px; /* Altura automática del elemento */
   display: inline-block; /* Muestra el elemento como un bloque en línea */
 }
 
@@ -53,7 +53,7 @@
 }
 
 .numero_etiqueta {
-  margin-left: 10px;
+  margin-left: 28px;
   display: inline-block !important;
   border-radius: 10px !important;
   color: #fff;
@@ -66,7 +66,9 @@
 
 .cuadrante_1, .cuadrante_2, .cuadrante_4, .cuadrante_3 {
   background-color: #f07f53;
-  width: 50%;
+  width: 550px;
+  overflow-x: auto; /* Agrega scroll horizontal si es necesario */
+  white-space: nowrap; /* Evita el salto de línea de los contenidos internos */
 }
 
 .cuadrante_1, .cuadrante_4{
@@ -75,4 +77,31 @@
 
 .cuadrante_4, .cuadrante_3 {
   border-top: 2px solid black; /* Borde del elemento */
+}
+
+.centrado_de_contenido { /* Establece reglas para elementos con la clase "centrado-en-panel" */
+  display: flex; /* Utiliza flexbox para controlar el diseño */
+  justify-content: center; /* Centra horizontalmente los elementos hijos */
+  align-items: center; /* Centra verticalmente los elementos hijos */
+}
+
+.grafico_odontograma { /* Establece reglas para elementos con la clase "grafico_odontograma" */
+  max-width: 1100px; /* Ancho máximo del elemento */
+  overflow-x: auto; /* Agrega scroll horizontal si es necesario */
+  white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+}
+
+@media (min-width: 1100px) { /* Oculta los scroll cuando la pantallaes meyor */
+  .grafico_odontograma, .cuadrante_1, 
+  .cuadrante_2, .cuadrante_4, .cuadrante_3 {
+    overflow-x: hidden;
+  }
+}
+
+.contenedor_izquierdo {
+  margin-right: 5px;
+}
+
+.contenedor_derecho {
+  margin-left: -15px;
 }
