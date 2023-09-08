@@ -50,6 +50,9 @@
 .plano_lateral:hover, .cara_incisal:hover {
   border: 1px solid rgb(34, 155, 84); /* Borde del elemento */  
   cursor: pointer; /* Cambiar el cursor al puntero */
+  transition: transform 0.2s; /* Transición suave para transformación*/
+  transform: scale(1.1);
+  z-index: 1; /* Aumenta el valor z-index para superponerse */
 }
 
 .numero_etiqueta {
