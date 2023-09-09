@@ -5,58 +5,64 @@
   display: inline-block; /* Muestra el elemento como un bloque en línea */
 }
 
-.plano_lateral {
+.plano_lateral, .cara_incisal {
   background-color: #FFFFFF; /* Color de fondo */
   border: 1px solid #7F7F7F; /* Borde del elemento */
   position: relative; /* Establece la posición del elemento */
-  left: 28px !important;
+}
+
+.vestibular_superior, .vestibular_inferior, .lingual, .palatina { /* figuras superiores e inferiores*/
+  left: 23px !important; /* Posición izquierda del elemento */
   width: 20px; /* Ancho del elemento */
   height: 15px; /* Altura del elemento */
-  border-radius: 5px 5px 0px 1px; /* Bordes redondeados */
 }
 
-.vestibular_superior, .vestibular_inferior, .lingual, .palatina {
-  left: 28px !important; /* Posición izquierda del elemento */
+.mesial_en_cuadrante_2, .mesial_en_cuadrante_3, .distal_en_cuadrante_1, .distal_en_cuadrante_4, 
+.mesial_en_cuadrante_1, .mesial_en_cuadrante_4, .distal_en_cuadrante_2, .distal_en_cuadrante_3 { /* figuras lado derecho y lado izquierdo*/
+  width: 15px; /* Ancho del elemento */
+  height: 20px; /* Altura del elemento */
 }
 
-.mesial_en_cuadrante_2, .mesial_en_cuadrante_3, .distal_en_cuadrante_1, .distal_en_cuadrante_4 {
-  top: 1.1px !important; /* Posición superior del elemento */
-  left: 11px !important; /* Posición izquierda del elemento */
-  transform: rotate(270deg); /* Rotar el elemento */
+.vestibular_superior, .lingual { /* figuras superiores */
+  border-radius: 5px 5px 0px 0px; /* Bordes redondeados */
 }
 
-.palatina, .vestibular_inferior {
-  top: 3px !important; /* Posición superior del elemento */
-  transform: rotate(180deg); /* Rotar el elemento */
+.mesial_en_cuadrante_2, .mesial_en_cuadrante_3, .distal_en_cuadrante_1, .distal_en_cuadrante_4 { /* figuras lado izquierdo */
+  bottom: 1px;
+  left: 9px !important; /* Posición izquierda del elemento */
+  border-radius: 5px 0px 0px 5px; /* Bordes redondeados */
 }
 
-.mesial_en_cuadrante_1, .mesial_en_cuadrante_4, .distal_en_cuadrante_2, .distal_en_cuadrante_3 {
-  top: -28px !important; /* Posición superior del elemento */
-  left: 44px !important; /* Posición izquierda del elemento */
-  transform: rotate(90deg); /* Rotar el elemento */
+.palatina, .vestibular_inferior { /* figuras inferiores */
+  bottom: 2px;
+  border-radius: 0px 0px 5px 5px; /* Bordes redondeados */
+}
+
+.mesial_en_cuadrante_1, .mesial_en_cuadrante_4, .distal_en_cuadrante_2, .distal_en_cuadrante_3 { /* figuras lado derecho */
+  bottom: 36px !important; /* Posición superior del elemento */
+  left: 42px !important; /* Posición izquierda del elemento */
+  border-radius: 0px 5px 5px 0px; /* Bordes redondeados */
 }
 
 .cara_incisal {
-  background: #F3F3F3; /* Color de fondo */
-  border: 1px solid #7F7F7F; /* Borde del elemento */
-  width: 25px; /* Ancho del elemento */
-  height: 25px; /* Altura del elemento */
-  top: -48px; /* Posición superior del elemento */
-  left: 25px; /* Posición izquierda del elemento */
-  position: relative; /* Establece la posición del elemento */
-  border-radius:10px; /* Bordes redondeados */
+  width: 24px; /* Ancho del elemento */
+  height: 24px; /* Altura del elemento */
+  bottom: 58px; /* Posición superior del elemento */
+  left: 21px; /* Posición izquierda del elemento */
+  border-radius: 10px; /* Bordes redondeados */
 }
 
 .plano_lateral:hover, .cara_incisal:hover {
   border: 1px solid rgb(34, 155, 84); /* Borde del elemento */  
   cursor: pointer; /* Cambiar el cursor al puntero */
   transition: transform 0.2s; /* Transición suave para transformación*/
-  transform: scale(1.1);
+  background-color: #e4e2e2; /* gris bien claro */
+  transform: scale(1.15); /* crece 15 % */
   z-index: 1; /* Aumenta el valor z-index para superponerse */
 }
 
 .numero_etiqueta {
-  margin-left: 28px;
+  margin-left: 23px;
   display: inline-block !important;
   border-radius: 10px !important;
   color: #fff;
