@@ -1,16 +1,20 @@
+const EXTRAIDO = "extraido";
+const EXTRAER = "extraer";
+const BORRAR = "borrar";
+
 function formarFiguraDental(numeroDePiezaDental)
 {
   return `<div data-name="value" id="pieza_dental_cuadrante${numeroDePiezaDental}" class="pieza_dental">
             <span class="numero_etiqueta">cuadrante${numeroDePiezaDental}</span>
-            <div id="parte_id_superior_cuadrante${numeroDePiezaDental}" class="plano_lateral parte_clase_superior"> 
+            <div id="parte_id_superior_cuadrante${numeroDePiezaDental}" class="plano_lateral parte_clase_superior" onclick="pintarSegunEleccion(event)"> 
             </div>
-            <div id="parte_id_izquierdo_cuadrante${numeroDePiezaDental}" class="plano_lateral parte_clase_izquierda">
+            <div id="parte_id_izquierdo_cuadrante${numeroDePiezaDental}" class="plano_lateral parte_clase_izquierda" onclick="pintarSegunEleccion(event)">
             </div>
-            <div id="parte_id_inferior_cuadrante${numeroDePiezaDental}" class="plano_lateral parte_clase_inferior">
+            <div id="parte_id_inferior_cuadrante${numeroDePiezaDental}" class="plano_lateral parte_clase_inferior" onclick="pintarSegunEleccion(event)">
             </div>
-            <div id="parte_id_derecho_cuadrante${numeroDePiezaDental}" class="plano_lateral parte_clase_derecha">
+            <div id="parte_id_derecho_cuadrante${numeroDePiezaDental}" class="plano_lateral parte_clase_derecha" onclick="pintarSegunEleccion(event)">
             </div>
-            <div id="cara_incisal_cuadrante${numeroDePiezaDental}" class="cara_incisal">
+            <div id="cara_incisal_cuadrante${numeroDePiezaDental}" class="cara_incisal" onclick="pintarSegunEleccion(event)">
             </div>
           </div>`;
 }
@@ -80,6 +84,33 @@ function establecerClasesEIdACadaCuadrante(definitivosIzquierda, definitivosDere
   remplazos = determinarYTraerArrayDeRemplazos('4', 'lingual', 'distal_en_cuadrante_4', 'vestibular_inferior', 'mesial_en_cuadrante_4');
   $("#contenido_cuadrante_4").append(buscarYRemplazarTodas(definitivosIzquierda, remplazos));
 
+}
+
+function pintarSegunEleccion(event)
+{
+  var idDelInput = $("input[type='radio']:checked")[0].id;
+  var label = $(`label[for='${idDelInput}']`);
+  
+  colorDeFondo = label.css("background-color"); // Obtengo el color con el se va pintar
+
+  var divPlanoDental = event.target; // div en que se hizo clic
+
+  var parteComunDelId = divPlanoDental.id.match(/\d{2}$/); // Utiliza una expresión regular para obtener los dos números al final (número de cuadrante y número de pieza dental). 
+
+  if (idDelInput == EXTRAER || idDelInput == EXTRAIDO) { // En el caso de que haya que extraer o que ya esté extraído, se marca toda la pieza dental 
+    $(`div[id$='_${parteComunDelId}']`).not("[id^='pieza_dental']").css("background-color", colorDeFondo); // Establecer un color de fondo en los div que terminan con "_x" en su ID, excepto los que comienzan con "pieza_dental"
+    $(`#pieza_dental_${parteComunDelId}`).attr("data-extraido-o-a-extraer", "true"); // Agrego el atributo data-* y un valor para saber que la fue o será extraida (el fin es saber que se pintó toda la pieza)
+  } 
+  else if (idDelInput == BORRAR){
+    if ($(`#pieza_dental_${parteComunDelId}`).attr("data-extraido-o-a-extraer") == "true") {
+      $(`div[id$='_${parteComunDelId}']`).not("[id^='pieza_dental']").css("background-color", "#FFFFFF"); // Establecer un color de fondo en los div que terminan con "_x" en su ID, excepto los que comienzan con "pieza_dental"
+      $(`#pieza_dental_${parteComunDelId}`).removeAttr("data-extraido-o-a-extraer");
+    } else {
+      $(divPlanoDental).css("background-color", "#FFFFFF");
+    }
+  } else {
+    $(divPlanoDental).css("background-color", colorDeFondo);
+  }
 }
 
 function crearOdontograma() 

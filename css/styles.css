@@ -56,7 +56,6 @@
   border: 1px solid rgb(34, 155, 84); /* Borde del elemento */  
   cursor: pointer; /* Cambiar el cursor al puntero */
   transition: transform 0.2s; /* Transición suave para transformación*/
-  background-color: #e4e2e2; /* gris bien claro */
   transform: scale(1.15); /* crece 15 % */
   z-index: 1; /* Aumenta el valor z-index para superponerse */
 }
